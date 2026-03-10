@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "fashion-1",
+      "description": "High-end minimalist fashion model",
+      "imageUrl": "https://picsum.photos/seed/fashion1/800/1200?grayscale",
+      "imageHint": "minimalist fashion"
+    },
+    {
+      "id": "fashion-2",
+      "description": "Futuristic streetwear concept",
+      "imageUrl": "https://picsum.photos/seed/fashion2/800/1200?grayscale",
+      "imageHint": "futuristic streetwear"
+    },
+    {
+      "id": "fashion-3",
+      "description": "Luxury accessory detail",
+      "imageUrl": "https://picsum.photos/seed/fashion3/800/1200?grayscale",
+      "imageHint": "luxury watch"
+    },
+    {
+      "id": "fashion-4",
+      "description": "Abstract fabric texture",
+      "imageUrl": "https://picsum.photos/seed/fashion4/800/1200?grayscale",
+      "imageHint": "silk texture"
+    },
+    {
+      "id": "fashion-5",
+      "description": "Architectural fashion silhouette",
+      "imageUrl": "https://picsum.photos/seed/fashion5/800/1200?grayscale",
+      "imageHint": "fashion silhouette"
+    }
+  ]
+}

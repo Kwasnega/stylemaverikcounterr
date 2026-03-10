@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 5% 3%;
+    --foreground: 210 20% 100%;
+    --card: 210 5% 5%;
+    --card-foreground: 210 20% 100%;
+    --popover: 210 5% 3%;
+    --popover-foreground: 210 20% 100%;
+    --primary: 210 15% 90%;
+    --primary-foreground: 210 5% 3%;
+    --secondary: 210 5% 10%;
+    --secondary-foreground: 210 20% 100%;
+    --muted: 210 5% 10%;
+    --muted-foreground: 210 10% 75%;
+    --accent: 192 91% 75%;
+    --accent-foreground: 210 5% 3%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 100%;
+    --border: 210 5% 20%;
+    --input: 210 5% 20%;
+    --ring: 192 91% 75%;
+    --radius: 0rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-accent/40 selection:text-white overflow-x-hidden;
+    touch-action: manipulation;
+  }
+}
+
+/* Glitch Effect - Optimized for Cinematic Impact */
+.glitch-container {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text {
+  position: relative;
+  color: white;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  clip-path: inset(0 0 0 0);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim-2 3.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip-path: inset(40% 0 61% 0); }
+  20% { clip-path: inset(92% 0 1% 0); }
+  40% { clip-path: inset(43% 0 1% 0); }
+  60% { clip-path: inset(25% 0 58% 0); }
+  80% { clip-path: inset(54% 0 7% 0); }
+  100% { clip-path: inset(58% 0 43% 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(24% 0 29% 0); }
+  20% { clip-path: inset(54% 0 21% 0); }
+  40% { clip-path: inset(21% 0 47% 0); }
+  60% { clip-path: inset(17% 0 81% 0); }
+  80% { clip-path: inset(82% 0 5% 0); }
+  100% { clip-path: inset(54% 0 33% 0); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}

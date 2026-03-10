@@ -1,0 +1,53 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @fileoverview Hardened Security Rules for Style Maverik.
+     * Separates collection and document matches for precise RBAC.
+     * Deployment Trigger: 2024-05-20T11:30:00Z
+     */
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * Admin check: Validates either the specific mission email or the verified Admin UID.
+     */
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == "admin@bryt.com" || 
+        request.auth.uid == "GlaC4oWTtIRmxskRoHABOyM9It43"
+      );
+    }
+
+    // Waitlist Access Control
+    // Path matches the collection itself for 'list' operations
+    match /waitlist {
+      allow list: if isAdmin();
+      
+      // Path matches individual documents in the collection
+      match /{entryId} {
+        // Public pioneers can create their entry
+        allow create: if request.resource.data.email is string 
+                      && request.resource.data.email.matches('^.+@.+\\..+$');
+        
+        // Admin has full control over all documents
+        allow read, write: if isAdmin();
+      }
+    }
+
+    // Secure user-specific preferences
+    match /users/{userId}/{document=**} {
+      allow read, write: if isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Default deny: Secure by default
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}
