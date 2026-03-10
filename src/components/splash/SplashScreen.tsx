@@ -108,7 +108,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
         {/* Intro branding */}
         <div ref={introTextRef} className="absolute z-20 text-center px-10 invisible w-full max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-black tracking-[0.3em] text-white uppercase mb-4 italic leading-tight">STYLE MAVERIK</h2>
-          <p className="text-[9px] md:text-[11px] tracking-[0.6em] text-primary uppercase font-black opacity-80">Orbits of Luxury Fashion</p>
+          <p className="text-[9px] md:text-[11px] tracking-[0.6em] text-primary uppercase font-black opacity-80">WE WEAR THE FUTURE</p>
         </div>
 
         {/* Brand Logo */}
@@ -129,7 +129,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           </div>
           
           <p className="message-line text-[10px] md:text-[12px] tracking-[0.8em] text-muted-foreground uppercase mb-6 md:mb-8 italic font-black">Not a relaunch.</p>
-          <h2 ref={rebirthRef} className="text-3xl md:text-5xl lg:text-7xl font-black tracking-[0.3em] text-white uppercase italic whitespace-nowrap leading-tight transition-all duration-1000 drop-shadow-[0_0_20px_rgba(85,214,247,0.5)]">This is a rebirth.</h2>
+          <h2 ref={rebirthRef} className="text-2xl md:text-5xl lg:text-7xl font-black tracking-[0.3em] text-white uppercase italic whitespace-nowrap leading-tight transition-all duration-1000 drop-shadow-[0_0_20px_rgba(85,214,247,0.5)]">This is a rebirth.</h2>
         </div>
       </div>
     </div>

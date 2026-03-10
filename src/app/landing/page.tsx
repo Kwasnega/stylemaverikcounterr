@@ -203,7 +203,7 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
-          <p className="hero-fade text-[10px] md:text-xl tracking-[0.5em] text-white uppercase mb-12 max-w-4xl font-black italic leading-relaxed opacity-80">"Step into the future of premium style."</p>
+          <p className="hero-fade text-[10px] md:text-xl tracking-[0.5em] text-white uppercase mb-12 max-w-4xl font-black italic leading-relaxed opacity-80">"We Wear The Future"</p>
           {!submitted && <div className="hero-fade animate-bounce mt-4"><ChevronDown className="w-8 h-8 text-white/40" /></div>}
         </section>
 
@@ -248,7 +248,7 @@ export default function LandingPage() {
                       <Image src={url} alt={`Teaser ${i+1}`} fill className="object-cover transition-all duration-1000 blur-lg opacity-70 grayscale" />
                       <div className="absolute inset-0 bg-black/20 backdrop-blur-md transition-opacity duration-700" />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[10px] tracking-[1em] text-white/40 uppercase font-black">Protected Drop</span>
+                        <span className="text-[10px] tracking-[1em] text-white/40 uppercase font-black">COMING SOON</span>
                       </div>
                     </div>
                   ))}
