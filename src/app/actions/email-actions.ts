@@ -33,7 +33,7 @@ const EMAIL_TEMPLATE = (name: string) => `
       The orbit has aligned. Your access to the new world of design is finally here. Step inside and explore the future of premium style.
     </p>
     
-    <a href="https://stylemaverik.com" style="display: inline-block; background-color: #fff; color: #000; padding: 22px 45px; text-decoration: none; font-weight: 900; letter-spacing: 6px; text-transform: uppercase; font-size: 12px; transition: all 0.3s;">
+    <a href="https://stylemaverik.shop/" style="display: inline-block; background-color: #fff; color: #000; padding: 22px 45px; text-decoration: none; font-weight: 900; letter-spacing: 6px; text-transform: uppercase; font-size: 12px; transition: all 0.3s;">
       ENTER STYLE MAVERIK
     </a>
     
